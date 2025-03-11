@@ -158,6 +158,13 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
 
         SetSex(target, sourceHumanoid.Sex, false, targetHumanoid);
         SetGender((target, targetHumanoid), sourceHumanoid.Gender);
+        targetHumanoid.Height = sourceHumanoid.Height; // CD - Character Records
+
+        targetHumanoid.Gender = sourceHumanoid.Gender;
+        if (TryComp<GrammarComponent>(target, out var grammar))
+            grammar.Gender = sourceHumanoid.Gender;
+
+        targetHumanoid.LastProfileLoaded = sourceHumanoid.LastProfileLoaded; // DeltaV - let paradox anomaly be cloned
 
         Dirty(target, targetHumanoid);
     }
@@ -472,6 +479,7 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
         }
 
         humanoid.Age = profile.Age;
+        humanoid.Height = profile.Height; // CD - Character Records
 
         Dirty(uid, humanoid);
     }
