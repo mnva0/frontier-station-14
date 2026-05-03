@@ -139,7 +139,7 @@ public sealed partial class PlayerProvidedCharacterRecords
             identifyingFeatures: "",
             allergies: "None",
             drugAllergies: "None",
-            postmortemInstructions: "Return home",
+            postmortemInstructions: "Revive", // Frontier
             medicalEntries: new List<RecordEntry>(),
             securityEntries: new List<RecordEntry>(),
             employmentEntries: new List<RecordEntry>()
