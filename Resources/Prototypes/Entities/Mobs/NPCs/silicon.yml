@@ -65,6 +65,10 @@
     tags:
     - BasicSilicon
   - type: IntrinsicRadioReceiver
+  - type: IntrinsicRadioTransmitter # Frontier: Comms for bots
+    channels: # Frontier: Comms for bots
+    - Common # Frontier: Comms for bots
+    - Binary # Frontier: Comms for bots
   - type: ActiveRadio
     channels:
     - Common
@@ -159,6 +163,16 @@
   - type: Vocalizer
   - type: DatasetVocalizer
     dataset: FirebotAd
+  - type: IntrinsicRadioTransmitter # Frontier: Comms for bots
+    channels: # Frontier: Comms for bots
+    - Common # Frontier: Comms for bots
+    - Binary # Frontier: Comms for bots
+    - Engineering # Frontier: Comms for bots
+  - type: ActiveRadio # Frontier: Comms for bots
+    channels: # Frontier: Comms for bots
+    - Common # Frontier: Comms for bots
+    - Binary # Frontier: Comms for bots
+    - Engineering # Frontier: Comms for bots
 
 - type: entity
   parent: MobSiliconBase
@@ -308,6 +322,16 @@
     interactFailureString: petting-failure-cleanbot
     interactSuccessSound:
       path: /Audio/Ambience/Objects/periodic_beep.ogg
+  - type: IntrinsicRadioTransmitter # Frontier: Comms for bots
+    channels: # Frontier: Comms for bots
+    - Common # Frontier: Comms for bots
+    - Binary # Frontier: Comms for bots
+    - Service # Frontier: Comms for bots
+  - type: ActiveRadio # Frontier: Comms for bots
+    channels: # Frontier: Comms for bots
+    - Common # Frontier: Comms for bots
+    - Binary # Frontier: Comms for bots
+    - Service # Frontier: Comms for bots
 
 - type: entity
   parent:
@@ -359,6 +383,16 @@
   - type: Inventory
     templateId: medibot
   - type: DoAfter
+  - type: IntrinsicRadioTransmitter # Frontier: Comms for bots
+    channels: # Frontier: Comms for bots
+    - Common # Frontier: Comms for bots
+    - Binary # Frontier: Comms for bots
+    - Medical # Frontier: Comms for bots
+  - type: ActiveRadio # Frontier: Comms for bots
+    channels: # Frontier: Comms for bots
+    - Common # Frontier: Comms for bots
+    - Binary # Frontier: Comms for bots
+    - Medical # Frontier: Comms for bots
 
 - type: entity
   parent:
@@ -457,6 +491,11 @@
     - SiliconEmotes
     - Bot
     - Unimplantable
+  - type: IntrinsicRadioTransmitter # Frontier: Comms for bots
+    channels: # Frontier: Comms for bots
+    - Common # Frontier: Comms for bots
+    - Binary # Frontier: Comms for bots
+    - Supply # Frontier: Comms for bots
   - type: ActiveRadio
     channels:
     - Common
