@@ -186,7 +186,7 @@ namespace Content.Shared.Preferences
             HashSet<ProtoId<TraitPrototype>> traitPreferences,
             Dictionary<string, RoleLoadout> loadouts)
             : this(other.Name, other.FlavorText, other.Species, other.Age, other.Sex, other.Gender, other.BankBalance, other.Appearance, other.SpawnPriority,
-                jobPriorities, other.PreferenceUnavailable, antagPreferences, traitPreferences, loadouts)
+                jobPriorities, other.PreferenceUnavailable, antagPreferences, traitPreferences, loadouts, other.Height, other.CDCharacterRecords) // Frontier: DV cherrypick of CD records
         {
         }
 

@@ -55,14 +55,16 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
 
         sprite[_sprite.LayerMapReserve((entity.Owner, sprite), HumanoidVisualLayers.Eyes)].Color = humanoidAppearance.EyeColor;
 
+        // Begin Frontier - replace `component` with `humanoidAppearance`. I think this needs to be undone in an upstream merge
         // Begin CD - Character Records
-        var speciesPrototype = _prototypeManager.Index<SpeciesPrototype>(component.Species);
-        var height = Math.Clamp(MathF.Round(component.Height, 2), speciesPrototype.MinHeight, speciesPrototype.MaxHeight); // should NOT be locked, at all
+        var speciesPrototype = _prototypeManager.Index<SpeciesPrototype>(humanoidAppearance.Species);
+        var height = Math.Clamp(MathF.Round(humanoidAppearance.Height, 2), speciesPrototype.MinHeight, speciesPrototype.MaxHeight); // should NOT be locked, at all
 
         sprite.Scale = speciesPrototype.BaseScale * new Vector2(speciesPrototype.ScaleHeight ? height : 1f, height); // DV - CD Character Records shouldn't nuke species heights
         // End CD - Character Records
 
-        sprite[sprite.LayerMapReserveBlank(HumanoidVisualLayers.Eyes)].Color = component.EyeColor;
+        sprite[sprite.LayerMapReserveBlank(HumanoidVisualLayers.Eyes)].Color = humanoidAppearance.EyeColor;
+        // End Frontier
     }
 
     private static bool IsHidden(HumanoidAppearanceComponent humanoid, HumanoidVisualLayers layer)

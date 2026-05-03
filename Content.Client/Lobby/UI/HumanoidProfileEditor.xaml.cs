@@ -116,8 +116,8 @@ namespace Content.Client.Lobby.UI
         private readonly RecordEditorGui _recordsTab;
         // End CD - Station Records
 
-        [ValidatePrototypeId<GuideEntryPrototype>]
-        private const string DefaultSpeciesGuidebook = "Species";
+        //[ValidatePrototypeId<GuideEntryPrototype>] # Frontier removal
+        //private const string DefaultSpeciesGuidebook = "Species"; # Frontier removal
 
         public event Action<List<ProtoId<GuideEntryPrototype>>>? OnOpenGuidebook;
 

@@ -164,8 +164,7 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
         if (TryComp<GrammarComponent>(target, out var grammar))
             grammar.Gender = sourceHumanoid.Gender;
 
-        targetHumanoid.LastProfileLoaded = sourceHumanoid.LastProfileLoaded; // DeltaV - let paradox anomaly be cloned
-
+        //targetHumanoid.LastProfileLoaded = sourceHumanoid.LastProfileLoaded; // DeltaV - let paradox anomaly be cloned // Frontier - we don't have LastProfileLoaded
         Dirty(target, targetHumanoid);
     }
 
